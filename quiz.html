@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    
+    <title>Dreamweaver น่ารู้</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="css/pogo-slider.min.css" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <link rel="stylesheet" href="css/responsive.css" />
+    
+    <link rel="stylesheet" href="css/custom.css" />
+
+
+</head>
+
+<body id="services" class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+    <div id="preloader">
+        <div class="loader">
+            <img src="images/loader.gif" alt="#" />
+        </div>
+    </div>
+    
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="100"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="index.html">หน้าแรก</a></li>
+                        <li><a class="nav-link" href="learn.html">บทเรียน</a></li>
+                        <li><a class="nav-link" href="quiz.html">แบบทดสอบ</a></li>
+                    </ul>
+                </div>
+              
+            </div>
+        </nav>
+    </header>
+    
+
+    
+	  <div class="section inner_page_header">
+	     <div class="container">
+		    <div class="row">
+              <div class="col-lg-12">
+			     <div class="full">
+				    <h3>แบบทดสอบ</h3>
+				 </div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    
+	<script language="JavaScript">
+
+var numQues = 10;
+
+var numChoi = 4;
+
+var answers = new Array(4);
+
+
+answers[0] = "Start > Programs / All Programs > Dreamweaver";
+answers[1] = "Status Bar";
+answers[2] = "Tool Bar";
+answers[3] = "File > New";
+answers[4] = "index.html";
+answers[5] = "File > Save";
+answers[6] = "ใส่รูปภาพพื้นหลังให้กับเว็บเพจ";
+answers[7] = "หน้าหลักเว็บไซต์ต้องตั้งชื่อว่า index.html";
+answers[8] = "Text";
+answers[9] = "File > Exit";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  score = Math.round(score);
+  form.percentage.value = score ;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+	<br>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+						   <div class="right">
+                            <h3><span class="theme_color">คำชี้แจง :</span> ให้เลือกข้อที่ถูกต้องที่สุดเมื่อทำเสร็จให้กดยืนยันระบบจะทำการตรวจและเฉลย</h3>
+                          </div>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="img/4.jpg" >  <br> 
+			<div class="row margin-top_30">
+                <div class="heading_main text_align_left">
+                <div class="right">
+                    <form name="quiz">
+                      
+                        1. การเรียกใช้งานโปรแกรม Macromedia Dreamweaver สามารถปฏิบัติได้ตามข้อใด
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="Start > Programs > Dreamweaver">
+                            <label class="form-check-label" for="exampleRadios1">
+                                ก. Start > Programs > Dreamweaver</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="Start > Macromedia > Dreamweaver">
+                            <label class="form-check-label" for="exampleRadios2">
+                                ข. Start > Macromedia > Dreamweaver</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="Programs > Dream">
+                            <label class="form-check-label" for="exampleRadios2">
+                                ค. Programs > Dream</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="Start > Programs / All Programs > Dreamweaver">
+                            <label class="form-check-label" for="exampleRadios2">
+                                ง. Start > Programs / All Programs > Dreamweaver</label>
+                          </div>
+                        <br>
+
+
+                        2. สิ่งที่บอกให้ผู้ที่ใช้งานคอมพิวเตอร์ทราบว่ากำลังใช้งานโปรแกรมอะไรอยู่และเอกสารที่ใช้ชื่ออะไร คือข้อใด ?
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="q2" value="Tool Bar">
+                              <label class="form-check-label" for="exampleRadios1">
+                                ก. Tool Bar                        </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="q2" value="Status Bar">
+                              <label class="form-check-label" for="exampleRadios2">
+                                ข. Status Bar                           </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="q2" value="Menu">
+                              <label class="form-check-label" for="exampleRadios2">
+                                ค. Menu                            </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q2" value="Title Bar">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    ง. Title Bar</label>
+                              </div>
+                            <br>
+
+                            3. แถบเครื่องมือมาตรฐาน คือข้อใด ?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" value="Tool Bar">
+                                <label class="form-check-label" for="exampleRadios1">
+                                  ก. Tool Bar                        </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" value="Status Bar">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  ข. Status Bar                           </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" value="Menu">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  ค. Menu                            </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q3" value="Title Bar">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                      ง. Title Bar</label>
+                                </div>
+                              <br>
+
+                              4. การสร้างเอกสารเว็บเพจใหม่ ใช้เมนูคำสั่งในข้อใด ?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" value="insetr > New">
+                                <label class="form-check-label" for="exampleRadios1">
+                                  ก. insetr > New                        </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" value="File > New">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  ข. File > New                           </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" value="Edit > New">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  ค. Edit > New                            </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q4" value="Site > New">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                      ง. Site > New</label>
+                                </div>
+                              <br>
+
+                              5. หน้าหลัก (โฮมเพจ) ของภาษา  HTML  ต้องตั้งชื่อว่าอย่างไร ?
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q5" value="indek.html">
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    ก. indek.html   </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q5" value="inddex.html">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    ข. inddex.html     </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q5" value="index.html">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    ค. index.html                            </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" value="ตั้งชื่อว่าอะไรก็ได้">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        ง. ตั้งชื่อว่าอะไรก็ได้</label>
+                                  </div>
+                                <br>
+
+                                6. การบันเอกสารเว็บเพจที่ยังไม่เคยบันทึกมาก่อน (เอกสารใหม่) ใช้วิธีการในข้อใด ?
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q6" value="File > Save">
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    ก. File > Save </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q6" value="Edit > Save As…">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    ข. Edit > Save As…     </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="q6" value="Edit > Save">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    ค. Edit > Save                            </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q6" value="ไม่มีข้อใดกล่าวถูก">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        ง.ไม่มีข้อใดกล่าวถูก</label>
+                                  </div>
+                                <br>
+
+                                7. Properties Background Image เป็นเครื่องมือที่ใช้ประโยชน์เรื่องใด ?
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q7" value="กำหนดคุณสมบัติของเว็บบราวเซอร์">
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      ก. กำหนดคุณสมบัติของเว็บบราวเซอร์</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q7" value="ใช้ในการสร้าง Site งาน">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      ข. ใช้ในการสร้าง Site งาน</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q7" value="กำหนดรูปแบบของรูปภาพ">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      ค. กำหนดรูปแบบของรูปภาพ</label>
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q7" value="ใส่รูปภาพพื้นหลังให้กับเว็บเพจ">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                          ง.ใส่รูปภาพพื้นหลังให้กับเว็บเพจ</label>
+                                    </div>
+                                  <br>
+
+                                  8. ข้อใดกล่าวถูกต้องเกี่ยวกับการสร้างเว็บเพจ ?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q8" value="เมื่อเราต้องการบันทึกให้กด Ctrl+C">
+                                      <label class="form-check-label" for="exampleRadios1">
+                                        ก. เมื่อเราต้องการบันทึกให้กด Ctrl+C</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q8" value="ไฟล์เว็บต้องเป็นภาษาไทยเท่านั้น">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        ข. ไฟล์เว็บต้องเป็นภาษาไทยเท่านั้น</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q8" value="หน้าหลักเว็บไซต์ต้องตั้งชื่อว่า index.html">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        ค. หน้าหลักเว็บไซต์ต้องตั้งชื่อว่า index.html</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q8" value="เราสามารถโปรแกรมWord สร้างเว็บเพจได้">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            ง.เราสามารถโปรแกรมWord สร้างเว็บเพจได้</label>
+                                      </div>
+                                    <br>
+
+                                    9. กลุ่มเครื่องมือในข้อใดที่ใช้ในการใส่ข้อความลงในเว็บเพจ ?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q9" value="Text">
+                                      <label class="form-check-label" for="exampleRadios1">
+                                        ก. Text</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q9" value="Application">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        ข. Application</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q9" value="Common">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        ค. Common</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q9" value="Favorites">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            ง.Favorites</label>
+                                      </div>
+                                    <br>
+
+                                    10. การออกจากโปรแกรม Dreamweaver ปฏิบัติตามขั้นตอนในข้อใด ?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q10" value="File > Close">
+                                      <label class="form-check-label" for="exampleRadios1">
+                                        ก. File > Close</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q10" value="File > Exit">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        ข. File > Exit</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="q10" value="File > Close All">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        ค. File > Close All</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="q10" value="สามารถทำได้ทุกวิธีที่กล่าวมา">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            ง.สามารถทำได้ทุกวิธีที่กล่าวมา</label>
+                                      </div>
+                                    <br>
+                                    
+                              <input type="button" class="btn btn-outline-primary" value="ยืนยัน" onClick="getScore(this.form)">
+                              <input type="reset" class="btn btn-outline-danger" value="ลบคำตอบ"> </p>
+                              <form> <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">คะแนนที่ได้ :</label>
+                                <div class="col-sm-2">
+                                  <input  type="text"  name="percentage" disabled class="form-control"  placeholder="">
+                                </div>
+                              </div>
+                                เฉลย :<br>
+                              <textarea class="form-control" name="solutions" wrap="virtual" rows="11" cols="30" disabled>
+                              </textarea>
+                      </form>
+                       
+			</div>
+        </div>
+    </div>
+    </div>
+	<br>
+
+  <div class="footer_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <p class="crp"><DIV ALIGN="CENTER">©<script type="text/javascript">document.write( new Date().getFullYear() );</script> Paramin All Rights Reserved.</DIV></p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    
+    <script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    <script src="js/slider-index.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/custom.js"></script>
+	<script>
+	/* counter js */
+
+(function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               
+		to: 0,                 
+		speed: 1000,           
+		refreshInterval: 100,  
+		decimals: 0,           
+		formatter: formatter,  
+		onUpdate: null,        
+		onComplete: null       
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
+
+jQuery(function ($) {
+  
+  $('.count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+  
+  
+  $('.timer').each(count);  
+  
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
+});
+	</script>
+</body>
+
+</html>
